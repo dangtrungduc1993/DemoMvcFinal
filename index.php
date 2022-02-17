@@ -49,7 +49,6 @@ $page = $_GET["page"] ?? "";
             break;
         case "login":
             if ($_SERVER["REQUEST_METHOD"] == "GET") {
-
                 $authController->showFormLogin();
             } else {
                 $authController->login($_REQUEST);
@@ -59,6 +58,7 @@ $page = $_GET["page"] ?? "";
             $authController->logout();
             break;
         default:
+            header("location:index.php?page=login");
     }
     ?>
 </div>

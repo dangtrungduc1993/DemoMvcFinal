@@ -5,7 +5,7 @@
         CREATE POST
     </div>
     <div class="card-body">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="post-title">Title</label>
                 <input type="text" name="title" class="form-control" id="post-title">
@@ -25,6 +25,10 @@
                         <?php endforeach;
                     } ?>
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="image-post">Image</label>
+                <input type="file" name="fileToUpload" class="form-control" id="image-post">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -25,6 +25,10 @@ class AuthController
 
     public function showFormLogin()
     {
+
+        if (isset($_SESSION["user"])) {
+            header("location:index.php?page=post-list");
+        }
         include_once "MVC/View/auth/login.php";
     }
 

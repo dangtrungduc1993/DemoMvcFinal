@@ -5,6 +5,7 @@
     <thead>
     <tr>
         <th scope="col">ID</th>
+        <th scope="col">Image</th>
         <th scope="col">Title</th>
         <th scope="col">Content</th>
         <th scope="col">User</th>
@@ -17,6 +18,7 @@
         <?php foreach ($posts as $post):?>
             <tr>
                 <th scope="row"><?php echo $post->id?></th>
+                <td style="padding: 5px"><img width="150px" src="<?php echo $post->image?>" alt="<?php echo $post->image?>"></td>
                 <td><?php echo $post->title?></td>
                 <td><?php echo $post->content?></td>
                 <td><?php echo $post->userName?></td>

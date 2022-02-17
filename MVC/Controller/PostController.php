@@ -41,6 +41,7 @@ class PostController extends BaseController
 
     public function create($request)
     {
+        $request["image"] = $this->uploadImage();
         $request["user"] = $_SESSION["user"]->id;
         $this->model->create($request);
         header("location:index.php?page=post-list");
